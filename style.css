@@ -1,0 +1,151 @@
+/* ── 全域重置與字型 ── */
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  background-color: #f0f4f8;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+/* ── 深色模式切換按鈕 ── */
+#darkToggle {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ── 卡片容器 ── */
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 頭像 ── */
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+/* ── 名字與介紹 ── */
+.card h1 {
+  font-size: 28px;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.bio {
+  color: #718096;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── 技能標籤 ── */
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 0 16px 0;
+}
+
+.skill-tag {
+  background-color: #ebf4ff;
+  color: #3182ce;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.skill-tag:hover {
+  background-color: #bee3f8;
+}
+
+/* ── 被選中的技能標籤（JS 會加上這個 class） ── */
+.skill-tag.active {
+  background-color: #3182ce;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ── 點擊提示文字 ── */
+.skill-msg {
+  font-size: 14px;
+  color: #3182ce;
+  min-height: 20px;
+  margin-bottom: 12px;
+}
+
+/* ── 聯絡按鈕 ── */
+.btn {
+  display: inline-block;
+  background-color: #3182ce;
+  color: white;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* ── 深色模式（JS 會幫 body 加上 dark class） ── */
+body.dark {
+  background-color: #1a202c;
+}
+
+body.dark .card {
+  background-color: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark h1 {
+  color: white;
+}
+
+body.dark .card h1 {
+  color: #f7fafc;
+}
+
+body.dark .card h2 {
+  color: #f7fafc;
+}
+
+body.dark .card h3 {
+  color: #f7fafc;
+}
+
+body.dark .bio {
+  color: #a0aec0;
+}
+
+body.dark #darkToggle {
+  background: #2d3748;
+  color: #f7fafc;
+  border-color: #4a5568;
+}
